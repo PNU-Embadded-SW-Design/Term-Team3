@@ -1,157 +1,69 @@
 # ninja log v5
 19	439	6397648445037882	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_cpu_a.o	61209862785ee662
-379	831	6397648448797859	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_os.o	7c43adfb4ae9276e
-3	875	6397648448827845	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-446	942	6397648449877866	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp.o	c1d0160364461254
-365	982	6397648449957867	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_i2c.o	4c13c157c1281bd9
+3980	4334	6397648483847894	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_sdio.o	d4ecf911e375db87
+5	497	6444829557245654	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
+4923	5396	6397648494467896	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_flag.o	9c7dac7ccf0390c7
+19	701	6397768909316041	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_os.o	7c43adfb4ae9276e
+31	823	6397768910486090	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_i2c.o	4c13c157c1281bd9
+6364	6781	6397648508343024	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_tick.o	dab232a7f2b07410
+5980	6335	6397648503883025	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_msg.o	84d37ae18bafef71
+727	1224	6397768914516039	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp.o	c1d0160364461254
+788	1332	6397768915636065	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_int.o	296a413cf7288ed1
 969	1242	6397648452977904	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/os_app_hooks.o	87311bf750fdd776
-862	1372	6397648454207838	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app_vect.o	b921d7b133766707
-909	1482	6397648455297855	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_int.o	296a413cf7288ed1
-1010	1592	6397648456387855	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_ser.o	b40314bd976c172e
-1267	1837	6397648458857847	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_stlm75.o	180f982f752e53e4
+3084	3407	6397648474597842	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_pwr.o	cb94813eef15ac84
+7	1204	6444770401025304	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app_vect.o	b921d7b133766707
+178	1230	6444770401075302	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/lineTracker.o	6e3bde72fbdef4eb
+2947	3328	6397648473807849	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_exti.o	41efdccad094dc81
+849	1286	6397768914996074	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_periph.o	702793e4003e7b6d
+993	1494	6397768917276065	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_ser.o	b40314bd976c172e
+1253	1625	6397768918596517	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_stlm75.o	180f982f752e53e4
+6258	6931	6397648509783027	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_task.o	eb1d25c4753f3012
 1624	1949	6397648460007859	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_bkp.o	b5c689498857ade6
+6057	6488	6397648505383073	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_q.o	ee10d88c48ad51ba
+5865	6176	6397648502303026	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_prio.o	bab29f0d49b59e30
+2587	3024	6397648470237862	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_gpio.o	fce8d5807c11a5db
 1401	1992	6397648460017856	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_adc.o	8d27f9b9fc2206a2
-1510	2118	6397648461667871	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_periph.o	702793e4003e7b6d
 1863	2213	6397648462657862	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_crc.o	593034ba29af75b7
+3665	3951	6397648480027897	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_systick.o	e165ca770a46d21c
 2020	2430	6397648464827870	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_dac.o	6053506a3431424b
+578	917	6444978105351288	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6f892f41ea34d5e3
+6807	7070	6397648511263031	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_var.o	939ca532afbdfa1
 1979	2498	6397648465427868	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_can.o	c2d21d1109e6bc9b
 2147	2560	6397648465667850	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_dma.o	cde7c9b603f8f74b
 2241	2625	6397648466467874	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_dbgmcu.o	8c5c31d82360a173
 2457	2920	6397648469707859	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_fsmc.o	6084f189965d17b
 2527	2981	6397648469847865	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_flash.o	bae5959926d5d18d
-2587	3024	6397648470237862	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_gpio.o	fce8d5807c11a5db
+5325	5775	6397648498273028	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_sem.o	361a65081f2612e1
 3009	3077	6397648471417832	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/CPU/Source/cpu_a.o	ae73bc7736f0f2a1
 2654	3100	6397648471187852	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_i2c.o	f6e95d0de25bbb5b
-2947	3328	6397648473807849	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_exti.o	41efdccad094dc81
-3084	3407	6397648474597842	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_pwr.o	cb94813eef15ac84
 3055	3500	6397648475527865	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_lib.o	4e3f813643d70650
+5422	5676	6397648497317893	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_int.o	9c84e9bac4b5be65
 3129	3639	6397648476907850	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_nvic.o	ded51bac074642dd
 3353	3694	6397648477347848	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_iwdg.o	c34df4e2c81b5098
 3531	3864	6397648479167853	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_rtc.o	aef5c02f08805381
-3665	3951	6397648480027897	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_systick.o	e165ca770a46d21c
 3435	4010	6397648480247843	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_rcc.o	320597a7a3f3807d
+6202	6546	6397648505823074	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_stat.o	509df7abcc55ca06
 3718	4121	6397648481737851	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_spi.o	4f2b4bcc27dd7d0
-3980	4334	6397648483847894	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_sdio.o	d4ecf911e375db87
 4038	4415	6397648484657862	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_usart.o	55e1bd8ed4ae0d83
 3894	4515	6397648485657853	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_tim.o	2444cd28dba84ad1
+5	553	6444978101630861	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/distanceSensor.o	e151bd7b0b02a34f
 4150	4578	6397648486207856	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/CPU/Source/cpu_c.o	82b5d1501938f63b
 4442	4741	6397648487887864	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/STM32 Library/src/stm32f10x_wwdg.o	3d1683a19a406a93
 4361	4779	6397648487947851	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/LIB/Source/lib_ascii.o	751863e7b2b8ce53
 4603	4896	6397648489497857	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/LIB/Source/lib_math.o	b26aea4a835a3fd4
 4543	4952	6397648490057887	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/CPU/Source/cpu_core.o	70a787ca56200369
 4803	5106	6397648491577863	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_dbg.o	eab7f089ec6f6a8e
+6515	6869	6397648509233073	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_time.o	48873d1a94b1d581
 4767	5240	6397648492947878	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/LIB/Source/lib_str.o	3befdd7d09327c24
-4977	5298	6397648493107859	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/LIB/Source/lib_mem.o	50cdeacd520c0c8f
-4923	5396	6397648494467896	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_flag.o	9c7dac7ccf0390c7
+5800	6232	6397648502423027	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_pend_multi.o	d61c4e3f27defc70
 5133	5515	6397648495667871	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_cpu_c.o	d04882e293dacb8
-5422	5676	6397648497317893	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_int.o	9c84e9bac4b5be65
-5325	5775	6397648498273028	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_sem.o	361a65081f2612e1
-5268	5840	6397648498913028	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_core.o	532780826c362cf9
+4977	5298	6397648493107859	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/LIB/Source/lib_mem.o	50cdeacd520c0c8f
+22	542	6397720712604913	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_core.o	532780826c362cf9
 5540	5956	6397648500103026	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_mutex.o	2c58f2c3ff772556
 5705	6033	6397648500863030	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_mem.o	94ddfe11b7bdef90
-5865	6176	6397648502303026	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_prio.o	bab29f0d49b59e30
-5800	6232	6397648502423027	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_pend_multi.o	d61c4e3f27defc70
-5980	6335	6397648503883025	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_msg.o	84d37ae18bafef71
-6057	6488	6397648505383073	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_q.o	ee10d88c48ad51ba
-6202	6546	6397648505823074	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_stat.o	509df7abcc55ca06
-6364	6781	6397648508343024	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_tick.o	dab232a7f2b07410
-6515	6869	6397648509233073	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_time.o	48873d1a94b1d581
-6258	6931	6397648509783027	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_task.o	eb1d25c4753f3012
 6572	7032	6397648510873037	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_tmr.o	2e6599ad2ff5b83b
-6807	7070	6397648511263031	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_var.o	939ca532afbdfa1
 6895	7175	6397648512307315	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/os_cfg_app.o	bfb97f493b6adcaf
-7202	8029	6397648520797660	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	388	6397653206282575	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-418	720	6397653209671368	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-5	376	6397654307503161	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-415	768	6397654311582912	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	490	6397658347279414	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-518	827	6397658350787023	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	409	6397668800340468	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-433	729	6397668803609998	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-5	572	6397671839143861	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-602	902	6397671842523993	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-7	381	6397672712675728	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-417	705	6397672716036009	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-5	592	6397676440988298	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-620	900	6397676444178727	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	403	6397677468401364	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-437	745	6397677471881838	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-7	361	6397678998397038	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-398	697	6397679001856643	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	492	6397679516682462	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-520	803	6397679519942837	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	342	6397680182396610	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-363	666	6397680185667819	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	332	6397680966211489	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-359	634	6397680969341490	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	377	6397681401732847	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-402	683	6397681404922326	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-5	674	6397684545672685	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-712	1000	6397684549043256	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-8	401	6397685468663951	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-431	781	6397685472513968	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	607	6397703608347043	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-635	990	6397703612242087	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	704	6397706838771538	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-739	1185	6397706843711199	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	526	6397715230585280	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-558	884	6397715234268214	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	484	6397720712094897	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-22	542	6397720712604913	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/uC/OS-III/Source/os_core.o	532780826c362cf9
-585	916	6397720716645085	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-6	507	6397727876822896	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-537	837	6397727880252644	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	452	6397729600964481	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-484	784	6397729604385898	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	461	6397731282473333	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-483	759	6397731285543468	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-5	510	6397744474121026	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-546	844	6397744477564389	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	361	6397746734489356	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-395	665	6397746737679485	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	469	6397750336028691	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-494	779	6397750339209117	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	362	6397752995960183	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-392	1346	6397753005873171	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	588	6397757061025762	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-615	923	6397757064456858	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	336	6397758214125675	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-360	623	6397758217115688	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-19	701	6397768909316041	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_os.o	7c43adfb4ae9276e
-4	761	6397768909596061	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-31	823	6397768910486090	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_i2c.o	4c13c157c1281bd9
-44	967	6397768911966088	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app_vect.o	b921d7b133766707
-727	1224	6397768914516039	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp.o	c1d0160364461254
-849	1286	6397768914996074	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_periph.o	702793e4003e7b6d
-788	1332	6397768915636065	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_int.o	296a413cf7288ed1
-993	1494	6397768917276065	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_ser.o	b40314bd976c172e
-1253	1625	6397768918596517	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/BSP/Source/bsp_stlm75.o	180f982f752e53e4
-1652	1951	6397768921909364	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	417	6397771665924414	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-462	749	6397771669374399	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	514	6397772667007735	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-536	837	6397772670382905	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	505	6397778214755407	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-526	825	6397778218085474	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	319	6397782803378282	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-353	656	6397782806820622	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-7	520	6397794981139311	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-542	837	6397794984469319	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	567	6397798146264393	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-591	870	6397798149378247	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-3	380	6397799424831735	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-408	745	6397799428518029	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	528	6397802661164003	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-554	849	6397802664552726	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	401	6397803701154772	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-434	731	6397803704545201	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	421	6397804093556178	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-452	755	6397804096976627	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6615728c9a682d65
-4	400	6444345885025992	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/lineTracker.o	6e3bde72fbdef4eb
-424	1656	6444345897656226	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	76b5c5abe977cca
-10	346	6444346807721855	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-373	693	6444346811241852	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	76b5c5abe977cca
-4	571	6444349003261122	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/APP/app.o	f4514801ebf08acb
-19	613	6444349003621097	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/lineTracker.o	6e3bde72fbdef4eb
-640	945	6444349007081426	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	76b5c5abe977cca
+6	367	6444979680274626	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/distanceSensor.o	e151bd7b0b02a34f
+392	682	6444979683505026	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6f892f41ea34d5e3
+5	340	6444980852757520	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Obj/distanceSensor.o	e151bd7b0b02a34f
+367	670	6444980856107455	C:/Micrium/Software/EvalBoards/Micrium/uC-Eval-STM32F107/IAR/uCOS-III-Ex2/Flash/Exe/uCOS-III-Ex2.out	6f892f41ea34d5e3

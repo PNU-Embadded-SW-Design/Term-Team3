@@ -17,18 +17,18 @@ void initLineTracker(){
 }
 
 void lineTrackTask(void* parg){
-  initLineTracker(); 
-  //OS_ERR err; 
+    initLineTracker(); 
+    OS_ERR err; 
   
-  while(1){
-    if(isBlack()){
-      printf("on"); 
-      BSP_LED_On(2); 
+    while(1){
+        if(isBlack()){
+            printf("on"); 
+            BSP_LED_On(2); 
+        }
+        else{
+            printf("off");
+            BSP_LED_Off(2); 
+        }
+        OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
     }
-    else{
-      printf("off");
-      BSP_LED_Off(2); 
-    }
-    //OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
-  }
 }

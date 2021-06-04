@@ -1455,6 +1455,12 @@
         </file>
     </group>
     <file>
+        <name>$PROJ_DIR$\distanceSensor.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\distanceSensor.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\lineTracker.c</name>
     </file>
     <file>
