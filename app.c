@@ -63,7 +63,7 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_ERR        *) &err
      ); 
     
-     OSTaskCreate((OS_TCB       *) &dist_tcb, 
+    OSTaskCreate((OS_TCB       *) &dist_tcb, 
                  (CPU_CHAR      *) "DistTracer", 
                  (OS_TASK_PTR    ) distTask, 
                  (void          *) 0, //arguements
@@ -76,7 +76,21 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-     );       
+    );
+    OSTaskCreate((OS_TCB       *) &motor_tcb, 
+                 (CPU_CHAR      *) "MotorMove", 
+                 (OS_TASK_PTR    ) motorTask, 
+                 (void          *) 0, //arguements
+                 (OS_PRIO        ) MOTOR_TASK_PRIO, 
+                 (CPU_STK       *) &motor_stack[0],
+                 (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE/10, //stk_limit
+                 (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE, 
+                 (OS_MSG_QTY     ) 0, 
+                 (OS_TICK        ) 0, 
+                 (void          *) 0, 
+                 (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
+                 (OS_ERR        *) &err
+    );        
     return; 
 }
 
