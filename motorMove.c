@@ -1,7 +1,7 @@
 #include "motorMove.h"
 #include "term.h"
 //motor B : pe3, pe2
-
+struct motor motorA[2],motorB[2];
 void initMotor(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE); //portE
     GPIO_InitTypeDef gpio_motor;
@@ -31,8 +31,8 @@ void initMotor(){
     motorB[1].pinTwo = GPIO_Pin_2;
 
     //gpio_motor.GPIO_Pin = GPIO_Pin_3|GPIO_Pin_2;//1:white,2 : grey
-    gpio_mogor.GPIO_Pin = motorA[0].pinOne|motorA[0].pinTwo|motorA[1].pinOne|motorA[1].pinTwo;
-    gpio_mogor.GPIO_Pin |= motorB[0].pinOne|motorB[0].pinTwo|motorB[1].pinOne|motorB[1].pinTwo;
+    gpio_motor.GPIO_Pin = motorA[0].pinOne|motorA[0].pinTwo|motorA[1].pinOne|motorA[1].pinTwo;
+    gpio_motor.GPIO_Pin |= motorB[0].pinOne|motorB[0].pinTwo|motorB[1].pinOne|motorB[1].pinTwo;
     gpio_motor.GPIO_Mode = GPIO_Mode_Out_PP;
     gpio_motor.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOE,&gpio_motor);
@@ -80,8 +80,8 @@ void motorTask(void* parg){
             }
         }
         else{
-            print("CAR_STATE IS WRONG\n");
-        }abort
+            printf("CAR_STATE IS WRONG\n");
+        }
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
     }
     
