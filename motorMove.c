@@ -45,7 +45,7 @@ void motorTask(void* parg){
     initMotor();
     OS_ERR err; 
     while(1){
-        if(CAR_STATE == STOP){
+        /*if(CAR_STATE == STOP){
             for(int i=0;i<2;i++){
                 GPIO_ResetBits(motorA[i].gpioOne,motorA[i].pinOne);
                 GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
@@ -83,8 +83,10 @@ void motorTask(void* parg){
         }
         else{
             printf("CAR_STATE IS WRONG\n");
-        }
+        }*/ 
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
+     OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+
     }
     
 }

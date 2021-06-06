@@ -1835,4 +1835,13 @@
     <file>
         <name>$PROJ_DIR$\lineTracker.h</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\motorMove.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\motorMove.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\term.h</name>
+    </file>
 </project>

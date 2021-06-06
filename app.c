@@ -82,6 +82,8 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
+    ); 
+    
     OSTaskCreate((OS_TCB       *) &motor_tcb, 
                  (CPU_CHAR      *) "MotorMove", 
                  (OS_TASK_PTR    ) motorTask, 

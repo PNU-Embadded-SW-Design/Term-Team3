@@ -1,16 +1,17 @@
 #include "distanceSensor.h"
+#include "term.h" 
 #include <stdio.h> 
 
 void distTask(void* parg){
     initDistSensor(); 
+    const int soundSpeed = 34; //34cm/us
+    const int stopThreshold = 40; 
     OS_ERR err;  
     
-    while(1){
-
-        BSP_LED_Toggle(1); 
+    while(1){      
         //trigger
         GPIO_WriteBit(GPIOB, GPIO_Pin_14, Bit_SET); 
-        OSTimeDly(11, OS_OPT_TIME_DLY, &err);  //OS_CFG_TICK_RATE_HZ 1000u  -> 2ticks 
+        OSTimeDly(11, OS_OPT_TIME_DLY, &err);  
         GPIO_WriteBit(GPIOB, GPIO_Pin_14, Bit_RESET); 
 
         //echo 
@@ -20,15 +21,24 @@ void distTask(void* parg){
           OSTimeDly(1, OS_OPT_TIME_DLY, &err); 
           count++; 
         }
-        int distance = count * 34 / 2;
-        if (distance <= 34) {
+        
+        int distance = count * soundSpeed / 2;
+        if (distance <= stopThreshold ) {
+          gCarState = STOP; 
+          #ifdef _DEBUG 
           BSP_LED_On(3); 
+          #endif 
         }
         else{
+          gCarState = GO; 
+          #ifdef _DEBUG 
           BSP_LED_Off(3); 
+          #endif 
         }
-        //irInfo.distance = distance; 
-        //printf("distance = %d cm \n", distance); 
+        
+        #ifdef _DEBUG 
+        printf("distance = %d cm \n", distance); 
+        #endif 
         OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
     }
 }
