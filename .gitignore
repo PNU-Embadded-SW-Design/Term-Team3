@@ -1,5 +1,8 @@
 *.eww
 *.log
+*.wsdt
+Flash/*
+settings/*
 settings/uCOS-III-Ex2.Flash.cspy.bat
 settings/uCOS-III-Ex2.Flash.cspy.ps1
 *.pbi
