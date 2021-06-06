@@ -5,7 +5,6 @@
 static  OS_TCB   AppTaskStartTCB; 
 static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
 
-
 static  void  AppTaskStart  (void *p_arg);
 
 int  main (void){
@@ -76,8 +75,7 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-     );       
+     ); 
+     
     return; 
 }
-
-//need to add echo -> distance measuring task 

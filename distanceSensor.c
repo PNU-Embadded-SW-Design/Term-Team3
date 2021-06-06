@@ -1,44 +1,60 @@
 #include "distanceSensor.h"
-
-IR_INFO irInfo; 
-
-
-void EXTI15_10_IRQHandler(){
-  OSIntEnter();
-  if(EXTI_GetITStatus(EXTI_Line12) != RESET){
-      EXTI_ClearITPendingBit(EXTI_Line12);
-      //need to updates 
-      //this interrupt is never called :(
-      BSP_LED_Toggle(3); 
-      /*irInfo.T1 = OS_TS_GET(); 
-      while(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12) != 0); 
-      irInfo.T2 = OS_TS_GET(); 
-      irInfo.distance = irInfo.T2 - irInfo.T1; */
-    }
-  OSIntExit(); 
-  
-}
+#include <stdio.h> 
 
 void distTask(void* parg){
+    initDistSensor(); 
+    OS_ERR err;  
+    
+    while(1){
+
+        BSP_LED_Toggle(1); 
+        //trigger
+        GPIO_WriteBit(GPIOB, GPIO_Pin_14, Bit_SET); 
+        OSTimeDly(11, OS_OPT_TIME_DLY, &err);  //OS_CFG_TICK_RATE_HZ 1000u  -> 2ticks 
+        GPIO_WriteBit(GPIOB, GPIO_Pin_14, Bit_RESET); 
+
+        //echo 
+        while(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_15) == Bit_RESET); 
+        int count = 0; 
+        while(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_15) == Bit_SET){
+          OSTimeDly(1, OS_OPT_TIME_DLY, &err); 
+          count++; 
+        }
+        int distance = count * 34 / 2;
+        if (distance <= 34) {
+          BSP_LED_On(3); 
+        }
+        else{
+          BSP_LED_Off(3); 
+        }
+        //irInfo.distance = distance; 
+        //printf("distance = %d cm \n", distance); 
+        OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+    }
+}
+
+int initDistSensor(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); //portB
-    //GPIOB->IDR |= GPIO_IDR_IDR12; //echo
-    //GPIOB->ODR |= GPIO_ODR_ODR13; //trigger
   
     GPIO_InitTypeDef gpio_trig; 
-    gpio_trig.GPIO_Pin = GPIO_Pin_13; 
-    gpio_trig.GPIO_Mode = GPIO_Mode_Out_PP; //puh pull 
+    gpio_trig.GPIO_Pin = GPIO_Pin_14; 
+    gpio_trig.GPIO_Speed = GPIO_Speed_50MHz; 
+    gpio_trig.GPIO_Mode = GPIO_Mode_Out_PP; //push pull vs drain out  
     GPIO_Init(GPIOB, &gpio_trig); 
     
     GPIO_InitTypeDef gpio_echo; 
-    gpio_echo.GPIO_Pin = GPIO_Pin_12; 
+    gpio_echo.GPIO_Pin = GPIO_Pin_15;
+    gpio_echo.GPIO_Speed = GPIO_Speed_50MHz; 
     gpio_echo.GPIO_Mode = GPIO_Mode_IPD;  //pull down, pull up 
     GPIO_Init(GPIOB, &gpio_echo); 
-    
-    
-    GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource12); 
+        
+    GPIO_WriteBit(GPIOB, GPIO_Pin_14, Bit_RESET); 
+
+    //fucking interrupt is not working...! 
+    /*GPIO_EXTILineConfig(GPIO_PortSourceGPIOB, GPIO_PinSource15); 
     
     EXTI_InitTypeDef EXTI_InitStructure; 
-    EXTI_InitStructure.EXTI_Line = EXTI_Line12; 
+    EXTI_InitStructure.EXTI_Line = EXTI_Line15; 
     EXTI_InitStructure.EXTI_LineCmd = ENABLE; 
     EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt; 
     EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling; 
@@ -49,41 +65,30 @@ void distTask(void* parg){
     BSP_IntEn(BSP_INT_ID_EXTI15_10); 
     
     NVIC_InitTypeDef NVIC_InitStructure; 
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); 
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1); 
+    
     NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQChannel; 
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE; 
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1; 
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1; 
     NVIC_Init(&NVIC_InitStructure); 
-    
-    OS_ERR err; 
-    irInfo.T1 = 0; 
-    irInfo.T2 = 0; 
-    irInfo.distance = 0; 
-    
-    while(1){
-        //trigger
-        GPIO_WriteBit(GPIOB, GPIO_Pin_13, Bit_SET); 
-        printf("check\n"); 
-        OSTimeDly(20, OS_OPT_TIME_DLY, &err);  //OS_CFG_TICK_RATE_HZ 1000u  -> 2ticks 
-        GPIO_WriteBit(GPIOB, GPIO_Pin_13, Bit_RESET); 
-        
-        BSP_LED_Toggle(1); 
-        OSTimeDlyHMSM(0, 0, 1, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+    */
+    return 0; 
+}
+
+/*void EXTI15_10_IRQHandler(){
+  OSIntEnter();
+  if(EXTI_GetITStatus(EXTI_Line15) != RESET){
+      EXTI_ClearITPendingBit(EXTI_Line15);
+      //need to updates 
+      //this interrupt is never called :(
+      BSP_LED_Toggle(3); 
+      printf("I am here!!\n"); 
+      irInfo.T1 = OS_TS_GET(); 
+      while(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_12) != 0); 
+      irInfo.T2 = OS_TS_GET(); 
+      irInfo.distance = irInfo.T2 - irInfo.T1; 
     }
-}
-
-//static IR_INFO irInfo; 
-/*
-int initDistSensor(){
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); //portB
-    GPIOB->IDR |= GPIO_IDR_IDR12; //echo
-    GPIOB->ODR |= GPIO_ODR_ODR13; //trigger
-}
-
-void distTask(void* parg){
-  initDistSensor(){
-    
-  }
-} 
-*/
+  OSIntExit(); 
+  
+}*/
