@@ -1,0 +1,17 @@
+ROBOT_You_are_losing_time_to_buy_coffee
+---
+TODO
+1. 장애물 인식 TASK
+2. LINE TRACK TASK
+3. LCD 출력 TASK
+4. PRESSURE 인식 TASK
+5. PEND/POST | TASK PRIO CHANGE
+6. HARDWARE MAKING!!!
+7. MNIST
+8. CAMERA TASK
+
+MODULE
+L9110 릴레이 모듈
+
+  
+
