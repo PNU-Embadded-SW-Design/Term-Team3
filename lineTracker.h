@@ -3,7 +3,7 @@
 
 #include "includes.h"
 
-#define LINE_TASK_STK_SIZE 128
+#define LINE_TASK_STK_SIZE 1024
 #define LINE_TASK_PRIO 2
 #define LINE_PORT GPIOE
 #define LINE_PNUM 13
