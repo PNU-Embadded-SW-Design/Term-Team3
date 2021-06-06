@@ -2,6 +2,7 @@
 #include "lineTracker.h"
 #include "distanceSensor.h" 
 #include "motorMove.h"
+#include "deliver.h"
 #include <stdio.h>
 static  OS_TCB   AppTaskStartTCB; 
 static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
@@ -55,7 +56,7 @@ static  void  AppTaskStart (void *p_arg)
                                          /* Init uC/OS periodic time src (SysTick).          */
     BSP_LED_On(2);
     
- 
+ /*
     OSTaskCreate((OS_TCB        *) &line_tcb, 
                  (CPU_CHAR      *) "LineTracer", 
                  (OS_TASK_PTR    ) lineTrackTask, 
@@ -98,7 +99,7 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-    );  /*
+    );  */
     OSTaskCreate((OS_TCB       *) &deliver_tcb, 
                  (CPU_CHAR      *) "Deliver Task Created", 
                  (OS_TASK_PTR    ) deliverTask, 
@@ -112,7 +113,7 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-    );     */  
+    );       
     return; 
 }
 

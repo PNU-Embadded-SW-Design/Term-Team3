@@ -1,7 +1,7 @@
 #ifndef TERM
 #define TERM
 //CAT_STATE
-int CAR_STATE = 0;
+static int CAR_STATE = 1;
 /*
 0 : STOP;
 1 : GO FOWARD;
@@ -13,6 +13,10 @@ int CAR_STATE = 0;
 #define GO_LEFT 2
 #define GO_RIGHT 3
 
+static int DELIVER_STATE = 0;
+#define DELIVERABLE 0
+#define DELIVERING 1
+#define WAITING 2 //Waiting to remove somthing on the robot
 
 
 

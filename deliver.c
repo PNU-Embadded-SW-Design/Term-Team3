@@ -1,39 +1,60 @@
 #include "deliver.h"
+#include "lcd.h"
+#include "touch.h"
+#include "term.h"
+#include <stdio.h>
+
 void initDeliver(){
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);//timer
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//Alternate Function I/O clock enable
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);//Alternate Function I/O clock enable
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
+    
+    GPIO_InitTypeDef gpio_press;
+    gpio_press.GPIO_Pin = gpio_pin_8;
+    gpio_press.GPIO_Mode = GPIO_Mode_AIN;
+    gpio_press
+    
+    
+    BSP_LED_On(1);
+    LCD_Init();
+    Touch_Configuration();
+    Touch_Adjust();
+    LCD_Clear(WHITE);
+    
 
-    GPIO_InitTypeDef gpio;
-    gpio.GPIO_Pin = GPIO_
+
 }
 void deliverTask(void* parg){
+    initDeliver();
     while(1){
-        if(DELIEVER_STATE == DELIVERABLE){      
+        if(DELIVER_STATE == DELIVERABLE){      
             //print lcd
             while(1){
-                if(true)//received input (where to go)
+                if(1)//received input (where to go)
                     break;
             }
             while(1){
-                if(true)//there is pressure
+                if(1)//there is pressure
                     break;
             }
-            DELIEVER_STATE = DELIVERING;
+            DELIVER_STATE = DELIVERING;
         }
         else if(DELIVER_STATE == DELIVERING){
             while(1){
-                if(true)//room is found
+                if(1)//room is found
                     break;
             }
-            DELIVRE_STATE = WAITING;
+            DELIVER_STATE = WAITING;
         }
         else if(DELIVER_STATE == WAITING){
             while(1){
-                if(true)//there isn't pressure
+                if(1)//there isn't pressure
                     break;
             }
 
+        }
+        else{
+            printf("hello,there\n");
         }
     }
 }
