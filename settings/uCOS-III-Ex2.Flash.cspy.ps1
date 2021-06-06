@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0_2\common\bin\cspybat" -f "C:\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\IAR\uCOS-III-Ex2\settings\uCOS-III-Ex2.Flash.general.xcl" --backend -f "C:\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\IAR\uCOS-III-Ex2\settings\uCOS-III-Ex2.Flash.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\hyorimlee\Documents\GitHub\Term-Team3\settings\uCOS-III-Ex2.Flash.general.xcl" --backend -f "C:\Users\hyorimlee\Documents\GitHub\Term-Team3\settings\uCOS-III-Ex2.Flash.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0_2\common\bin\cspybat" -f "C:\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\IAR\uCOS-III-Ex2\settings\uCOS-III-Ex2.Flash.general.xcl" --debug_file=$debugfile --backend -f "C:\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\IAR\uCOS-III-Ex2\settings\uCOS-III-Ex2.Flash.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\hyorimlee\Documents\GitHub\Term-Team3\settings\uCOS-III-Ex2.Flash.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\hyorimlee\Documents\GitHub\Term-Team3\settings\uCOS-III-Ex2.Flash.driver.xcl" 
 }

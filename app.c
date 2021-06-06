@@ -1,7 +1,8 @@
 #include <includes.h>
 #include "lineTracker.h"
 #include "distanceSensor.h" 
-
+#include "motorMove.h"
+#include <stdio.h>
 static  OS_TCB   AppTaskStartTCB; 
 static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
 
@@ -9,11 +10,12 @@ static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
 static  void  AppTaskStart  (void *p_arg);
 
 int  main (void){
+    
     OS_ERR  err;
-    BSP_IntDisAll();                                            /* Disable all interrupts.                              */
+    BSP_IntDisAll();                                            /* Disable all interrupts.*/                              
     OSInit(&err);  
-                                             /* Init uC/OS-III.                                      */
-    OSTaskCreate((OS_TCB     *)&AppTaskStartTCB,                /* Create the start task                                */
+                                             /* Init uC/OS-III.                             */         
+    OSTaskCreate((OS_TCB     *)&AppTaskStartTCB,                /* Create the start task      */                          
                  (CPU_CHAR   *)"App Task Start",
                  (OS_TASK_PTR )AppTaskStart, 
                  (void       *)0,
@@ -27,6 +29,7 @@ int  main (void){
                  (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  (OS_ERR     *)&err
     ); 
+    
     
     OSStart(&err);                                              /* Start multitasking (i.e. give control to uC/OS-III). */
 }
@@ -42,12 +45,17 @@ static  void  AppTaskStart (void *p_arg)
    
     BSP_Init();                                                   /* Initialize BSP functions                         */
     CPU_Init();                                                   /* Initialize the uC/CPU services */   
+    
     BSP_LED_Off(0); 
+    
 
     cpu_clk_freq = BSP_CPU_ClkFreq();                             /* Determine SysTick reference freq.                */                                                                        
     cnts         = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;  /* Determine nbr SysTick increments                 */
-    OS_CPU_SysTickInit(cnts);                                     /* Init uC/OS periodic time src (SysTick).          */
- 
+    OS_CPU_SysTickInit(cnts);
+                                         /* Init uC/OS periodic time src (SysTick).          */
+    BSP_LED_On(2);
+    
+ /*
     OSTaskCreate((OS_TCB        *) &line_tcb, 
                  (CPU_CHAR      *) "LineTracer", 
                  (OS_TASK_PTR    ) lineTrackTask, 
@@ -63,7 +71,7 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_ERR        *) &err
      ); 
     
-     OSTaskCreate((OS_TCB       *) &dist_tcb, 
+    OSTaskCreate((OS_TCB       *) &dist_tcb, 
                  (CPU_CHAR      *) "DistTracer", 
                  (OS_TASK_PTR    ) distTask, 
                  (void          *) 0, //arguements
@@ -76,7 +84,21 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-     );       
+    );*/
+    OSTaskCreate((OS_TCB       *) &motor_tcb, 
+                 (CPU_CHAR      *) "MotorMove", 
+                 (OS_TASK_PTR    ) motorTask, 
+                 (void          *) 0, //arguements
+                 (OS_PRIO        ) MOTOR_TASK_PRIO, 
+                 (CPU_STK       *) &motor_stack[0],
+                 (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE/10, //stk_limit
+                 (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE, 
+                 (OS_MSG_QTY     ) 0, 
+                 (OS_TICK        ) 0, 
+                 (void          *) 0, 
+                 (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
+                 (OS_ERR        *) &err
+    );        
     return; 
 }
 

@@ -6,7 +6,7 @@
 
 "-p" 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0_2\arm\CONFIG\debugger\ST\STM32F103ZE.ddf" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\ST\STM32F103ZE.ddf" 
 
 "--drv_verify_download" 
 
@@ -14,7 +14,7 @@
 
 "--device=STM32F103ZE" 
 
-"--drv_communication_log=C:\Program Files\IAR Systems\Embedded Workbench 9.0_2\arm\cspycomm.log" 
+"--drv_communication_log=C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\cspycomm.log" 
 
 "--drv_communication=USB0" 
 
