@@ -45,7 +45,7 @@ static  void  AppTaskStart (void *p_arg)
    
     BSP_Init();                                                   /* Initialize BSP functions                         */
     CPU_Init();                                                   /* Initialize the uC/CPU services */   
-    
+    printf("start machine\n");
     BSP_LED_Off(0); 
     
 
@@ -55,7 +55,7 @@ static  void  AppTaskStart (void *p_arg)
                                          /* Init uC/OS periodic time src (SysTick).          */
     BSP_LED_On(2);
     
- /*
+ 
     OSTaskCreate((OS_TCB        *) &line_tcb, 
                  (CPU_CHAR      *) "LineTracer", 
                  (OS_TASK_PTR    ) lineTrackTask, 
@@ -84,7 +84,7 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-    );*/
+    );
     OSTaskCreate((OS_TCB       *) &motor_tcb, 
                  (CPU_CHAR      *) "MotorMove", 
                  (OS_TASK_PTR    ) motorTask, 
@@ -98,7 +98,21 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-    );        
+    );  /*
+    OSTaskCreate((OS_TCB       *) &deliver_tcb, 
+                 (CPU_CHAR      *) "Deliver Task Created", 
+                 (OS_TASK_PTR    ) deliverTask, 
+                 (void          *) 0, //arguements
+                 (OS_PRIO        ) DELIVER_TASK_PRIO, 
+                 (CPU_STK       *) &deliver_stack[0],
+                 (CPU_STK_SIZE   ) DELIVER_TASK_STK_SIZE/10, //stk_limit
+                 (CPU_STK_SIZE   ) DELIVER_TASK_STK_SIZE, 
+                 (OS_MSG_QTY     ) 0, 
+                 (OS_TICK        ) 0, 
+                 (void          *) 0, 
+                 (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
+                 (OS_ERR        *) &err
+    );     */  
     return; 
 }
 
