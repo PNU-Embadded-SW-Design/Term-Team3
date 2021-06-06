@@ -2,6 +2,8 @@
 #include "term.h"
 //motor B : pe3, pe2
 
+struct motor motorA[2],motorB[2];
+
 void initMotor(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE); //portE
     GPIO_InitTypeDef gpio_motor;
@@ -31,8 +33,8 @@ void initMotor(){
     motorB[1].pinTwo = GPIO_Pin_2;
 
     //gpio_motor.GPIO_Pin = GPIO_Pin_3|GPIO_Pin_2;//1:white,2 : grey
-    gpio_mogor.GPIO_Pin = motorA[0].pinOne|motorA[0].pinTwo|motorA[1].pinOne|motorA[1].pinTwo;
-    gpio_mogor.GPIO_Pin |= motorB[0].pinOne|motorB[0].pinTwo|motorB[1].pinOne|motorB[1].pinTwo;
+    gpio_motor.GPIO_Pin = motorA[0].pinOne|motorA[0].pinTwo|motorA[1].pinOne|motorA[1].pinTwo;
+    gpio_motor.GPIO_Pin |= motorB[0].pinOne|motorB[0].pinTwo|motorB[1].pinOne|motorB[1].pinTwo;
     gpio_motor.GPIO_Mode = GPIO_Mode_Out_PP;
     gpio_motor.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOE,&gpio_motor);
@@ -48,8 +50,8 @@ void motorTask(void* parg){
                 GPIO_ResetBits(motorA[i].gpioOne,motorA[i].pinOne);
                 GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
 
-                GPIO_ResetBits(motorB[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorA[i].pinTwo);
+                GPIO_ResetBits(motorB[i].gpioOne,motorB[i].pinOne);
+                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
             }
         }
         else if(CAR_STATE == GO_FORWARD){
@@ -57,8 +59,8 @@ void motorTask(void* parg){
                 GPIO_SetBits(motorA[i].gpioOne,motorA[i].pinOne);
                 GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
 
-                GPIO_SetBits(motorB[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorA[i].pinTwo);
+                GPIO_SetBits(motorB[i].gpioOne,motorB[i].pinOne);
+                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
             }
         }
         else if(CAR_STATE == GO_LEFT){
@@ -66,8 +68,8 @@ void motorTask(void* parg){
                 GPIO_ResetBits(motorA[i].gpioOne,motorA[i].pinOne);
                 GPIO_SetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
 
-                GPIO_SetBits(motorB[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorA[i].pinTwo);
+                GPIO_SetBits(motorB[i].gpioOne,motorB[i].pinOne);
+                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
             }
         }
         else if(CAR_STATE == GO_RIGHT){
@@ -75,13 +77,13 @@ void motorTask(void* parg){
                 GPIO_SetBits(motorA[i].gpioOne,motorA[i].pinOne);
                 GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
 
-                GPIO_ResetBits(motorB[i].gpioOne,motorA[i].pinOne);
-                GPIO_SetBits(motorB[i].gpioTwo,motorA[i].pinTwo);
+                GPIO_ResetBits(motorB[i].gpioOne,motorB[i].pinOne);
+                GPIO_SetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
             }
         }
         else{
-            print("CAR_STATE IS WRONG\n");
-        }abort
+            printf("CAR_STATE IS WRONG\n");
+        }
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
     }
     

@@ -9,13 +9,13 @@
 static OS_TCB motor_tcb;
 static CPU_STK motor_stack[MOTOR_TASK_STK_SIZE];
 
-typedef struct {
+struct motor{
     GPIO_TypeDef* gpioOne;
     GPIO_TypeDef* gpioTwo;
     u16 pinOne;
     u16 pinTwo;
-}motor;
-struct motor motorA[2],motorB[2];
+};
+
 void initMotor();
 void motorTask(void* parg);
 
