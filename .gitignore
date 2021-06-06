@@ -1,2 +1,203 @@
 *.eww
 *.log
+Flash/BrowseInfo/.ninja_log
+Flash/BrowseInfo/APP/app.pbi
+Flash/BrowseInfo/APP/app.pbi.dep
+Flash/BrowseInfo/APP/app.xcl
+Flash/BrowseInfo/APP/app_vect.pbi
+Flash/BrowseInfo/APP/app_vect.pbi.dep
+Flash/BrowseInfo/APP/app_vect.xcl
+Flash/BrowseInfo/APP/os_app_hooks.pbi
+Flash/BrowseInfo/APP/os_app_hooks.pbi.dep
+Flash/BrowseInfo/APP/os_app_hooks.xcl
+Flash/BrowseInfo/BSP/Source/bsp.pbi
+Flash/BrowseInfo/BSP/Source/bsp.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp.xcl
+Flash/BrowseInfo/BSP/Source/bsp_i2c.pbi
+Flash/BrowseInfo/BSP/Source/bsp_i2c.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_i2c.xcl
+Flash/BrowseInfo/BSP/Source/bsp_int.pbi
+Flash/BrowseInfo/BSP/Source/bsp_int.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_int.xcl
+Flash/BrowseInfo/BSP/Source/bsp_os.pbi
+Flash/BrowseInfo/BSP/Source/bsp_os.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_os.xcl
+Flash/BrowseInfo/BSP/Source/bsp_periph.pbi
+Flash/BrowseInfo/BSP/Source/bsp_periph.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_periph.xcl
+Flash/BrowseInfo/BSP/Source/bsp_ser.pbi
+Flash/BrowseInfo/BSP/Source/bsp_ser.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_ser.xcl
+Flash/BrowseInfo/BSP/Source/bsp_stlm75.pbi
+Flash/BrowseInfo/BSP/Source/bsp_stlm75.pbi.dep
+Flash/BrowseInfo/BSP/Source/bsp_stlm75.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_adc.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_adc.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_adc.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_bkp.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_bkp.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_bkp.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_can.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_can.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_can.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_crc.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_crc.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_crc.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dac.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dac.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dac.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dbgmcu.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dbgmcu.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dbgmcu.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dma.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dma.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_dma.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_exti.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_exti.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_exti.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_flash.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_flash.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_flash.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_fsmc.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_fsmc.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_fsmc.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_gpio.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_gpio.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_gpio.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_i2c.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_i2c.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_i2c.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_iwdg.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_iwdg.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_iwdg.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_lib.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_lib.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_lib.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_nvic.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_nvic.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_nvic.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_pwr.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_pwr.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_pwr.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rcc.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rcc.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rcc.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rtc.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rtc.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_rtc.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_sdio.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_sdio.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_sdio.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_spi.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_spi.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_spi.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_systick.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_systick.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_systick.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_tim.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_tim.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_tim.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_usart.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_usart.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_usart.xcl
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_wwdg.pbi
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_wwdg.pbi.dep
+Flash/BrowseInfo/BSP/STM32 Library/src/stm32f10x_wwdg.xcl
+Flash/BrowseInfo/build.ninja
+Flash/BrowseInfo/distanceSensor.pbi
+Flash/BrowseInfo/distanceSensor.pbi.dep
+Flash/BrowseInfo/distanceSensor.xcl
+Flash/BrowseInfo/lineTracker.pbi
+Flash/BrowseInfo/lineTracker.pbi.dep
+Flash/BrowseInfo/lineTracker.xcl
+Flash/BrowseInfo/uC/CPU/Source/cpu_c.pbi
+Flash/BrowseInfo/uC/CPU/Source/cpu_c.pbi.dep
+Flash/BrowseInfo/uC/CPU/Source/cpu_c.xcl
+Flash/BrowseInfo/uC/CPU/Source/cpu_core.pbi
+Flash/BrowseInfo/uC/CPU/Source/cpu_core.pbi.dep
+Flash/BrowseInfo/uC/CPU/Source/cpu_core.xcl
+Flash/BrowseInfo/uC/LIB/Source/lib_ascii.pbi
+Flash/BrowseInfo/uC/LIB/Source/lib_ascii.pbi.dep
+Flash/BrowseInfo/uC/LIB/Source/lib_ascii.xcl
+Flash/BrowseInfo/uC/LIB/Source/lib_math.pbi
+Flash/BrowseInfo/uC/LIB/Source/lib_math.pbi.dep
+Flash/BrowseInfo/uC/LIB/Source/lib_math.xcl
+Flash/BrowseInfo/uC/LIB/Source/lib_mem.pbi
+Flash/BrowseInfo/uC/LIB/Source/lib_mem.pbi.dep
+Flash/BrowseInfo/uC/LIB/Source/lib_mem.xcl
+Flash/BrowseInfo/uC/LIB/Source/lib_str.pbi
+Flash/BrowseInfo/uC/LIB/Source/lib_str.pbi.dep
+Flash/BrowseInfo/uC/LIB/Source/lib_str.xcl
+Flash/BrowseInfo/uC/OS-III/os_cfg_app.pbi
+Flash/BrowseInfo/uC/OS-III/os_cfg_app.pbi.dep
+Flash/BrowseInfo/uC/OS-III/os_cfg_app.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_core.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_core.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_core.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_cpu_c.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_cpu_c.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_cpu_c.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_dbg.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_dbg.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_dbg.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_flag.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_flag.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_flag.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_int.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_int.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_int.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_mem.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_mem.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_mem.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_msg.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_msg.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_msg.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_mutex.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_mutex.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_mutex.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_pend_multi.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_pend_multi.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_pend_multi.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_prio.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_prio.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_prio.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_q.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_q.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_q.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_sem.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_sem.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_sem.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_stat.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_stat.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_stat.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_task.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_task.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_task.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_tick.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_tick.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_tick.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_time.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_time.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_time.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_tmr.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_tmr.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_tmr.xcl
+Flash/BrowseInfo/uC/OS-III/Source/os_var.pbi
+Flash/BrowseInfo/uC/OS-III/Source/os_var.pbi.dep
+Flash/BrowseInfo/uC/OS-III/Source/os_var.xcl
+Flash/BrowseInfo/uCOS-III-Ex2.pbd
+Flash/BrowseInfo/uCOS-III-Ex2.pbd.browse
+Flash/BrowseInfo/uCOS-III-Ex2.pbw
+Flash/BrowseInfo/uCOS-III-Ex2_part0.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part1.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part2.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part3.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part4.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part5.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part6.pbi
+Flash/BrowseInfo/uCOS-III-Ex2_part7.pbi
+settings/uCOS-III-Ex2.dbgdt
+settings/uCOS-III-Ex2.dnx
+settings/uCOS-III-Ex2.Flash.cspy.bat
+settings/uCOS-III-Ex2.Flash.cspy.ps1
+settings/uCOS-III-Ex2.Flash.general.xcl
