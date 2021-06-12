@@ -15,10 +15,10 @@ int CAR_STATE = 0;
 
 #define _DEBUG
 
-enum CAR_STATE {STOP, GO}; 
-enum CAR_DIR {FORWARD, LEFT, RIGHT}; 
-
-static enum CAR_STATE gCarState = STOP; 
-static enum CAR_DIR gCarDir = FORWARD; 
-
+typedef enum {STOP, GO} CAR_STATE; 
+typedef enum {FORWARD, LEFT, RIGHT} CAR_DIR;  
+/*
+enum CAR_STATE gCarState = GO; 
+enum CAR_DIR gCarDir =FORWARD; 
+*/
 #endif

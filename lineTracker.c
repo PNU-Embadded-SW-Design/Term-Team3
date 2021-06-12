@@ -1,6 +1,9 @@
 #include "lineTracker.h"
 #include <stdio.h> 
 
+extern CAR_STATE gCarState; 
+extern CAR_DIR gCarDir; 
+
 /*int isBlack(){
     if(GPIOB->IDR & GPIO_IDR_IDR13){
         return 1; 
@@ -9,7 +12,7 @@
         return 0; 
 }*/
 
-enum CAR_DIR getDirection(){
+CAR_DIR getDirection(){
     int rightBlack = !(GPIOB->IDR & R_SENSE); 
     int leftBlack = !(GPIOB->IDR & L_SENSE); 
     if(rightBlack && leftBlack){
@@ -18,13 +21,13 @@ enum CAR_DIR getDirection(){
         #endif 
         return FORWARD; 
     }
-    else if( rightBlack && !leftBlack){
+    else if( !rightBlack && leftBlack){
         #ifdef _DEBUG
         printf("Left\n"); 
         #endif
         return LEFT; 
     }
-    else if ( !rightBlack && leftBlack){
+    else if ( rightBlack && !leftBlack){
       #ifdef _DEBUG
       printf("Right\n"); 
       #endif

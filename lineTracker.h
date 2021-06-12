@@ -3,6 +3,7 @@
 
 #include "includes.h"
 #include "term.h" 
+
 #define LINE_TASK_STK_SIZE      1024
 #define LINE_TASK_PRIO          2
 #define LINE_PORT               GPIOB

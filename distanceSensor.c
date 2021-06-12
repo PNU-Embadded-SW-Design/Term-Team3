@@ -1,6 +1,9 @@
 #include "distanceSensor.h"
 #include "term.h" 
+
 #include <stdio.h> 
+extern CAR_STATE gCarState; 
+extern CAR_DIR gCarDir; 
 
 void distTask(void* parg){
     initDistSensor(); 
