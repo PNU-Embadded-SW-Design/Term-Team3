@@ -1,2 +1,6 @@
 *.eww
 *.log
+.vscode/
+BSP/
+Flash/
+settings/
