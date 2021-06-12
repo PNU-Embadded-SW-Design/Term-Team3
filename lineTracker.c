@@ -1,4 +1,6 @@
 #include "lineTracker.h"
+#include "term.h" 
+
 #include <stdio.h> 
 
 extern CAR_STATE gCarState; 
@@ -21,13 +23,13 @@ CAR_DIR getDirection(){
         #endif 
         return FORWARD; 
     }
-    else if( !rightBlack && leftBlack){
+    else if( rightBlack && !leftBlack){
         #ifdef _DEBUG
         printf("Left\n"); 
         #endif
         return LEFT; 
     }
-    else if ( rightBlack && !leftBlack){
+    else if ( !rightBlack && leftBlack){
       #ifdef _DEBUG
       printf("Right\n"); 
       #endif
@@ -62,6 +64,6 @@ void lineTrackTask(void* parg){
             //printf("off");
             BSP_LED_Off(2); 
         }*/
-        OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+        OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
     }
 }

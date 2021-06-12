@@ -2,7 +2,6 @@
 #define DIST
 
 #include "includes.h"
-#include "term.h" 
 
 #define DIST_TASK_STK_SIZE 1024
 #define DIST_TASK_PRIO 2

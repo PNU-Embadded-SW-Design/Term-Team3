@@ -42,7 +42,7 @@ void distTask(void* parg){
         #ifdef _DEBUG 
         printf("distance = %d cm \n", distance); 
         #endif 
-        OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+        OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
     }
 }
 

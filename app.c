@@ -1,12 +1,12 @@
 #include <includes.h>
+#include "term.h"
 #include "lineTracker.h"
 #include "distanceSensor.h" 
 #include "motorMove.h"
 #include <stdio.h>
 
 CAR_STATE gCarState = GO; 
-CAR_DIR gCarDir =FORWARD; 
-
+CAR_DIR gCarDir = FORWARD; 
 
 static  OS_TCB   AppTaskStartTCB; 
 static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
@@ -59,7 +59,7 @@ static  void  AppTaskStart (void *p_arg)
                                          /* Init uC/OS periodic time src (SysTick).          */
     BSP_LED_On(2);
     
-    /*OSTaskCreate((OS_TCB        *) &line_tcb, 
+    OSTaskCreate((OS_TCB        *) &line_tcb, 
                  (CPU_CHAR      *) "LineTracer", 
                  (OS_TASK_PTR    ) lineTrackTask, 
                  (void          *) 0, //arguements
@@ -72,7 +72,7 @@ static  void  AppTaskStart (void *p_arg)
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-     );*/ 
+     );
     
     OSTaskCreate((OS_TCB       *) &dist_tcb, 
                  (CPU_CHAR      *) "DistTracer", 
