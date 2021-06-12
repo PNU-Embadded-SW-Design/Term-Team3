@@ -9,35 +9,27 @@ void initMotor(){
     GPIO_InitTypeDef gpio_motor;
     
     //motor a front
-    motorA[0].gpioOne = GPIOE;
-    motorA[0].gpioTwo = GPIOE;
-    motorA[0].pinOne=GPIO_Pin_3;
-    motorA[0].pinTwo = GPIO_Pin_2;
+    motorA[0].pinOne=GPIO_Pin_8;
+    motorA[0].pinTwo = GPIO_Pin_9;
 
-    //motor a back
-    motorA[1].gpioOne = GPIOE;
-    motorA[1].gpioTwo = GPIOE;
-    motorA[1].pinOne=GPIO_Pin_3;
+    //motor a back    
+    motorA[1].pinOne=GPIO_Pin_1;
     motorA[1].pinTwo = GPIO_Pin_2;
 
     //motor b front
-    motorB[0].gpioOne = GPIOE;
-    motorB[0].gpioTwo = GPIOE;
-    motorB[0].pinOne=GPIO_Pin_3;
-    motorB[0].pinTwo = GPIO_Pin_2;
+    motorB[0].pinOne=GPIO_Pin_10;
+    motorB[0].pinTwo = GPIO_Pin_11;
 
     //motor b back
-    motorB[1].gpioOne = GPIOE;
-    motorB[1].gpioTwo = GPIOE;
     motorB[1].pinOne=GPIO_Pin_3;
-    motorB[1].pinTwo = GPIO_Pin_2;
+    motorB[1].pinTwo = GPIO_Pin_4;
 
     //gpio_motor.GPIO_Pin = GPIO_Pin_3|GPIO_Pin_2;//1:white,2 : grey
     gpio_motor.GPIO_Pin = motorA[0].pinOne|motorA[0].pinTwo|motorA[1].pinOne|motorA[1].pinTwo;
     gpio_motor.GPIO_Pin |= motorB[0].pinOne|motorB[0].pinTwo|motorB[1].pinOne|motorB[1].pinTwo;
     gpio_motor.GPIO_Mode = GPIO_Mode_Out_PP;
     gpio_motor.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOE,&gpio_motor);
+    GPIO_Init(GPIOA,&gpio_motor);
 
 }
 // 00 : stop, 10 : go forward, 01 : go backward
