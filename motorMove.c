@@ -5,22 +5,22 @@
 struct motor motorA[2],motorB[2];
 
 void initMotor(){
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE); //portE
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); //portE
     GPIO_InitTypeDef gpio_motor;
     
-    //motor a front
-    motorA[0].pinOne=GPIO_Pin_8;
-    motorA[0].pinTwo = GPIO_Pin_9;
+    //motor A front
+    motorA[0].pinOne=GPIO_Pin_13;
+    motorA[0].pinTwo = GPIO_Pin_12;
 
-    //motor a back    
+    //motor A back    
     motorA[1].pinOne=GPIO_Pin_1;
     motorA[1].pinTwo = GPIO_Pin_2;
 
-    //motor b front
+    //motor B front
     motorB[0].pinOne=GPIO_Pin_10;
     motorB[0].pinTwo = GPIO_Pin_11;
 
-    //motor b back
+    //motor B back
     motorB[1].pinOne=GPIO_Pin_3;
     motorB[1].pinTwo = GPIO_Pin_4;
 
@@ -37,47 +37,56 @@ void motorTask(void* parg){
     initMotor();
     OS_ERR err; 
     while(1){
-        /*if(CAR_STATE == STOP){
+      
+        if( gCarState == STOP){
             for(int i=0;i<2;i++){
-                GPIO_ResetBits(motorA[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
-
-                GPIO_ResetBits(motorB[i].gpioOne,motorB[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
+                //right : stop
+                GPIO_ResetBits(GPIOA,motorA[i].pinOne);
+                GPIO_ResetBits(GPIOA,motorA[i].pinTwo);
+                //left : stop
+                GPIO_ResetBits(GPIOA,motorB[i].pinOne);
+                GPIO_ResetBits(GPIOA,motorB[i].pinTwo);
             }
         }
-        else if(CAR_STATE == GO_FORWARD){
-            for(int i=0;i<2;i++){
-                GPIO_SetBits(motorA[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
-
-                GPIO_SetBits(motorB[i].gpioOne,motorB[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
+        else if ( gCarState == GO){
+            if(gCarDir == FORWARD){
+                for(int i=0;i<2;i++){
+                    //right : go
+                    GPIO_SetBits(GPIOA,motorA[i].pinOne);
+                    GPIO_ResetBits(GPIOA,motorA[i].pinTwo);
+                    GPIO_WriteBit(GPIOA, motorA[i].pinTwo, Bit_RESET);
+                    //left : go
+                    GPIO_SetBits(GPIOA,motorB[i].pinOne);
+                    GPIO_ResetBits(GPIOA,motorB[i].pinTwo);
+                    GPIO_WriteBit(GPIOA, motorB[i].pinTwo, Bit_RESET);
+                }
+                printf("go forward\n");
             }
-        }
-        else if(CAR_STATE == GO_LEFT){
-            for(int i=0;i<2;i++){
-                GPIO_ResetBits(motorA[i].gpioOne,motorA[i].pinOne);
-                GPIO_SetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
-
-                GPIO_SetBits(motorB[i].gpioOne,motorB[i].pinOne);
-                GPIO_ResetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
+            else if (gCarDir ==LEFT){
+                for(int i=0;i<2;i++){
+                    //right : go
+                    GPIO_SetBits(GPIOA,motorA[i].pinOne);
+                    GPIO_ResetBits(GPIOA,motorA[i].pinTwo);
+                    //left : stop
+                    GPIO_ResetBits(GPIOA,motorB[i].pinOne);
+                    GPIO_SetBits(GPIOA,motorB[i].pinTwo);
+                }
             }
-        }
-        else if(CAR_STATE == GO_RIGHT){
-            for(int i=0;i<2;i++){
-                GPIO_SetBits(motorA[i].gpioOne,motorA[i].pinOne);
-                GPIO_ResetBits(motorA[i].gpioTwo,motorA[i].pinTwo);
-
-                GPIO_ResetBits(motorB[i].gpioOne,motorB[i].pinOne);
-                GPIO_SetBits(motorB[i].gpioTwo,motorB[i].pinTwo);
+            else if (gCarDir == RIGHT){
+                for(int i=0;i<2;i++){
+                    //right : back
+                    GPIO_ResetBits(GPIOA,motorA[i].pinOne);
+                    GPIO_SetBits(GPIOA,motorA[i].pinTwo);
+                    //left : go
+                    GPIO_SetBits(GPIOA,motorB[i].pinOne);
+                    GPIO_ResetBits(GPIOA,motorB[i].pinTwo);
+                }
             }
+            else printf("WRONG gCarDir\n");
         }
-        else{
-            printf("CAR_STATE IS WRONG\n");
-        }*/ 
+        else printf("WRONG gCarState\n");
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
-     OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
+     //OSTimeDlyHMSM(0, 0, 0, 100, OS_OPT_TIME_HMSM_STRICT, &err);
 
     }
     

@@ -53,7 +53,7 @@ static  void  AppTaskStart (void *p_arg)
     OS_CPU_SysTickInit(cnts);
                                          /* Init uC/OS periodic time src (SysTick).          */
     BSP_LED_On(2);
-    
+    /*
     OSTaskCreate((OS_TCB        *) &line_tcb, 
                  (CPU_CHAR      *) "LineTracer", 
                  (OS_TASK_PTR    ) lineTrackTask, 
@@ -83,7 +83,7 @@ static  void  AppTaskStart (void *p_arg)
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
     ); 
-    
+    */
     OSTaskCreate((OS_TCB       *) &motor_tcb, 
                  (CPU_CHAR      *) "MotorMove", 
                  (OS_TASK_PTR    ) motorTask, 

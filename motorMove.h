@@ -2,6 +2,7 @@
 #define MOTOR
 
 #include "includes.h"
+#include "term.h"
 
 #define MOTOR_TASK_STK_SIZE 128
 #define MOTOR_TASK_PRIO 2
