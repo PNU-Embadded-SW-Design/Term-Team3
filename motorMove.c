@@ -1,5 +1,7 @@
 #include "motorMove.h"
 #include "term.h"
+#include "touch.h"
+#include "lcd.h"
 //motor B : pe3, pe2
 extern CAR_STATE gCarState; 
 extern CAR_DIR gCarDir; 
@@ -36,6 +38,7 @@ void initMotor(){
 }
 // 00 : stop, 10 : go forward, 01 : go backward
 void motorTask(void* parg){
+    initLCD();
     initMotor();
     OS_ERR err; 
     while(1){
