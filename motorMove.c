@@ -7,15 +7,7 @@ extern CAR_STATE gCarState;
 extern CAR_DIR gCarDir; 
 
 struct motor motorA[2],motorB[2];
-void initLCD(){
 
-    BSP_LED_On(1);
-    LCD_Init();
-    Touch_Configuration();
-    Touch_Adjust();
-    LCD_Clear(WHITE);
-    
-}
 void initMotor(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); //portE
     GPIO_InitTypeDef gpio_motor;
