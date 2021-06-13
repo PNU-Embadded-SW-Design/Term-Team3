@@ -1,36 +1,52 @@
 #include "lcd.h"
-#include "includes.h"
+#include "stdio.h"
+#include "stdlib.h"
+#include "stm32f10x.h"
+#include "stm32f10x_rcc.h"
+#include "stm32f10x_gpio.h"
 #include "font.h"
 
 /* Private variable ---------------------------------------------------------*/
 
-u16 DeviceCode;
+uint16_t DeviceCode;
 
 /* Private typedef -----------------------------------------------------------*/
 
 /* private function---------------------------------------------------------- */
 
-static void LCD_WR_REG(u16 LCD_Reg)
+static void LCD_WR_REG(uint16_t LCD_Reg)
 {
 	// TODO implement using GPIO_ResetBits/GPIO_SetBits
-	
-	GPIO_Write(GPIOE, LCD_Reg);
+	//PIN15(RD), PIN13(RS), PIN6(CS), PIN14(WR) 
+	GPIO_SetBits(GPIOD, GPIO_Pin_15); 
+    GPIO_ResetBits(GPIOD, GPIO_Pin_13);
+    GPIO_ResetBits(GPIOC, GPIO_Pin_6);
+    GPIO_ResetBits(GPIOD, GPIO_Pin_14);
+
+    GPIO_Write(GPIOE, LCD_Reg);
+    GPIO_SetBits(GPIOC, GPIO_Pin_6);
+    GPIO_SetBits(GPIOD, GPIO_Pin_14);
 	// TODO implement using GPIO_ResetBits/GPIO_SetBits
-	
 }
 
-static void LCD_WR_DATA(u16 LCD_Data)
+static void LCD_WR_DATA(uint16_t LCD_Data)
 {
 	// TODO implement using GPIO_ResetBits/GPIO_SetBits
-	
+	//PIN15(RD), PIN13(RS), PIN6(CS), PIN14(WR)
+	GPIO_SetBits(GPIOD, GPIO_Pin_15); 
+    GPIO_SetBits(GPIOD, GPIO_Pin_13);
+    GPIO_ResetBits(GPIOC, GPIO_Pin_6);
+    GPIO_ResetBits(GPIOD, GPIO_Pin_14); 
+
 	GPIO_Write(GPIOE, LCD_Data);
+    GPIO_SetBits(GPIOC, GPIO_Pin_6);
+    GPIO_SetBits(GPIOD, GPIO_Pin_14);
 	// TODO implement using GPIO_ResetBits/GPIO_SetBits
-	
 }
 
-static u16 LCD_ReadReg(u16 LCD_Reg)
+static uint16_t LCD_ReadReg(uint16_t LCD_Reg)
 {
-	u16 temp;
+	uint16_t temp;
 	GPIO_InitTypeDef GPIO_InitStructure;
 
 	LCD_WR_REG(LCD_Reg);
@@ -56,7 +72,7 @@ static u16 LCD_ReadReg(u16 LCD_Reg)
 	return temp;
 }
 
-static void LCD_WriteReg(u16 LCD_Reg, u16 LCD_RegValue)
+static void LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue)
 {
 	LCD_WR_REG(LCD_Reg);
 	LCD_WR_DATA(LCD_RegValue);
@@ -99,9 +115,9 @@ static void LCD_Configuration(void)
 	GPIO_Init(GPIOC, &GPIO_InitStructure);
 }
 
-static void LCD_Delay(u32 nCount)
+static void LCD_Delay(uint32_t nCount)
 {
-	u16 i;
+	__IO uint16_t i;
 	for (i = 0; i < (nCount * 5); i++)
 	{
 		;
@@ -235,9 +251,9 @@ void LCD_Init(void)
 	LCD_Clear(WHITE);
 }
 
-void LCD_Clear(u16 Color)
+void LCD_Clear(uint16_t Color)
 {
-	u32 index = 0;
+	uint32_t index = 0;
 	LCD_SetCursor(0x00, 0x0000);
 	LCD_WriteRAM_Prepare();
 	for (index = 0; index < 76800; index++)
@@ -246,8 +262,8 @@ void LCD_Clear(u16 Color)
 	}
 }
 
-void LCD_Fill(u8 xsta, u16 ysta, u8 xend, u16 yend,
-			  u16 colour)
+void LCD_Fill(uint8_t xsta, uint16_t ysta, uint8_t xend, uint16_t yend,
+			  uint16_t colour)
 {
 	u32 n;
 
@@ -288,14 +304,14 @@ void LCD_WindowMax(unsigned int x, unsigned int y, unsigned int x_end,
         LCD_SetCursor(x, y);
 }
 
-void LCD_DrawPoint(u16 xsta, u16 ysta)
+void LCD_DrawPoint(uint16_t xsta, uint16_t ysta)
 {
 	LCD_SetCursor(xsta, ysta);
 	LCD_WR_REG(0x22);
 	LCD_WR_DATA(POINT_COLOR);
 }
 
-void LCD_DrawLine(u16 xsta, u16 ysta, u16 xend, u16 yend)
+void LCD_DrawLine(uint16_t xsta, uint16_t ysta, uint16_t xend, uint16_t yend)
 {
 	u16 x, y, t;
 	if ((xsta == xend) && (ysta == yend))
@@ -336,7 +352,7 @@ void LCD_DrawLine(u16 xsta, u16 ysta, u16 xend, u16 yend)
 	}
 }
 
-void LCD_DrawCircle(u16 x0, u16 y0, u8 r)
+void LCD_DrawCircle(uint16_t x0, uint16_t y0, uint8_t r)
 {
 	int a, b;
 	int di;
@@ -367,8 +383,8 @@ void LCD_DrawCircle(u16 x0, u16 y0, u8 r)
 	}
 }
 
-void LCD_DrawRectangle(u16 xsta, u16 ysta, u16 xend,
-					   u16 yend)
+void LCD_DrawRectangle(uint16_t xsta, uint16_t ysta, uint16_t xend,
+					   uint16_t yend)
 {
 	LCD_DrawLine(xsta, ysta, xend, ysta);
 	LCD_DrawLine(xsta, ysta, xsta, yend);
@@ -410,10 +426,10 @@ void LCD_ShowChar(u8 x, u16 y, u8 num, u8 size, u16 PenColor, u16 BackColor)
 	LCD_WindowMax(0x0000, 0x0000, 240, 320);
 }
 
-void LCD_ShowCharString(u16 x, u16 y, const u8 *p,
-						u16 PenColor, u16 BackColor)
+void LCD_ShowCharString(uint16_t x, uint16_t y, const uint8_t *p,
+						uint16_t PenColor, uint16_t BackColor)
 {
-	u8 size = 16;
+	uint8_t size = 16;
 
 	if (x > MAX_CHAR_POSX)
 	{
