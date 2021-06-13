@@ -90,7 +90,7 @@ void initLCD(){
     BSP_LED_On(1);
     LCD_Init();
     Touch_Configuration();
-    Touch_Adjust();
+    //Touch_Adjust();
     LCD_Clear(WHITE);
     
 }

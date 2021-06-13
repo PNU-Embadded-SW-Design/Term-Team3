@@ -1455,10 +1455,25 @@
         </file>
     </group>
     <file>
+        <name>$PROJ_DIR$\deliver.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\deliver.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\distanceSensor.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\distanceSensor.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\font.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\lcd.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\lcd.h</name>
     </file>
     <file>
         <name>$PROJ_DIR$\lineTracker.c</name>
@@ -1474,5 +1489,11 @@
     </file>
     <file>
         <name>$PROJ_DIR$\term.h</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\touch.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\touch.h</name>
     </file>
 </project>

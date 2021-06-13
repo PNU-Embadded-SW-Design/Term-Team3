@@ -92,6 +92,6 @@ void lineTrackTask(void* parg){
 
     while(1){
         gCarDir = getDirection(); 
-        //OSTimeDlyHMSM(0, 0, 0, 5, OS_OPT_TIME_HMSM_STRICT, &err);
+        OSTimeDlyHMSM(0, 0, 0, 5, OS_OPT_TIME_HMSM_STRICT, &err);
     }
 }

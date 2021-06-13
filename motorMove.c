@@ -100,7 +100,7 @@ void motorTask(void* parg){
         }
         //else printf("WRONG gCarState\n");
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
-        //OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
+        OSTimeDlyHMSM(0, 0, 0, 5, OS_OPT_TIME_HMSM_STRICT, &err);
 
     }
     
