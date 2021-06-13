@@ -1,21 +1,14 @@
 #include "motorMove.h"
 #include "term.h"
+#include "touch.h"
+#include "lcd.h"
 //motor B : pe3, pe2
 extern CAR_STATE gCarState; 
 extern CAR_DIR gCarDir; 
 
 struct motor motorA[2],motorB[2];
 void initLCD(){
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);//timer
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//Alternate Function I/O clock enable
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC,ENABLE);
-    
-    GPIO_InitTypeDef gpio_press;
-    gpio_press.GPIO_Pin = gpio_pin_8;
-    gpio_press.GPIO_Mode = GPIO_Mode_AIN;
-    gpio_press
-    
-    
+
     BSP_LED_On(1);
     LCD_Init();
     Touch_Configuration();
@@ -53,7 +46,7 @@ void initMotor(){
 }
 // 00 : stop, 10 : go forward, 01 : go backward
 void motorTask(void* parg){
-    InitLCD();
+    initLCD();
     initMotor();
     OS_ERR err; 
     while(1){
