@@ -8,7 +8,7 @@ extern CAR_DIR gCarDir;
 void distTask(void* parg){
     initDistSensor(); 
     const int soundSpeed = 34; //34cm/us
-    const int stopThreshold = 10000; 
+    const int stopThreshold = 15000; 
     OS_ERR err;  
     
     while(1){      

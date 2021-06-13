@@ -94,7 +94,8 @@ void initLCD(){
     LCD_Clear(WHITE);
     
 }
-void initDeliver(){
+
+void deliverTask(void* parg){
     initLCD();
     const int x=0,y=1;
     int str[2] = {80,70},change[2] = {30,240},exit[2]={140,240}, rec_len[2]={80,40};
@@ -107,38 +108,8 @@ void initDeliver(){
     funcNumCheck(pixel_x,pixel_y);
     LCD_Clear(WHITE);
     LCD_ShowNum(str[x],str[y],num,1,BLACK,WHITE);
-}
-void deliverTask(void* parg){
-    initDeliver();
-    /*while(1){
-        if(DELIVER_STATE == DELIVERABLE){      
-            //print lcd
-            while(1){
-                if(1)//received input (where to go)
-                    break;
-            }
-            while(1){
-                if(1)//there is pressure
-                    break;
-            }
-            DELIVER_STATE = DELIVERING;
-        }
-        else if(DELIVER_STATE == DELIVERING){
-            while(1){
-                if(1)//room is found
-                    break;
-            }
-            DELIVER_STATE = WAITING;
-        }
-        else if(DELIVER_STATE == WAITING){
-            while(1){
-                if(1)//there isn't pressure
-                    break;
-            }
-
-        }
-        else{
-            printf("hello,there\n");
-        }
-    }*/
+    
+    CPU_TS ts; 
+    OS_ERR err; 
+    OSTaskSemPend(0, OS_OPT_PEND_BLOCKING, &ts, &err); 
 }
