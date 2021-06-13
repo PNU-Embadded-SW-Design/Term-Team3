@@ -18,8 +18,12 @@ int  main (void){
     
     OS_ERR  err;
     BSP_IntDisAll();                                            /* Disable all interrupts.*/                              
-    OSInit(&err);  
-                                             /* Init uC/OS-III.                             */         
+    OSInit(&err);                                               /* Init uC/OS-III.                             */    
+    
+    OSSchedRoundRobinCfg((CPU_BOOLEAN)DEF_ENABLED, 
+                         (OS_TICK    )10,
+                         (OS_ERR    *)&err);
+    
     OSTaskCreate((OS_TCB     *)&AppTaskStartTCB,                /* Create the start task      */                          
                  (CPU_CHAR   *)"App Task Start",
                  (OS_TASK_PTR )AppTaskStart, 
@@ -59,6 +63,7 @@ static  void  AppTaskStart (void *p_arg)
     OS_CPU_SysTickInit(cnts);
                                          /* Init uC/OS periodic time src (SysTick).          */
     BSP_LED_On(2);
+    
     OSTaskCreate((OS_TCB       *) &deliver_tcb, 
                  (CPU_CHAR      *) "Deliver", 
                  (OS_TASK_PTR    ) deliverTask, 
@@ -83,7 +88,7 @@ static  void  AppTaskStart (void *p_arg)
                  (CPU_STK_SIZE   ) LINE_TASK_STK_SIZE/10, //stk_limit
                  (CPU_STK_SIZE   ) LINE_TASK_STK_SIZE, 
                  (OS_MSG_QTY     ) 0, 
-                 (OS_TICK        ) 0, 
+                 (OS_TICK        ) 5, 
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
@@ -98,11 +103,11 @@ static  void  AppTaskStart (void *p_arg)
                  (CPU_STK_SIZE   ) DIST_TASK_STK_SIZE/10, //stk_limit
                  (CPU_STK_SIZE   ) DIST_TASK_STK_SIZE, 
                  (OS_MSG_QTY     ) 0, 
-                 (OS_TICK        ) 0, 
+                 (OS_TICK        ) 20, 
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
-    ); 
+    );
     
     OSTaskCreate((OS_TCB       *) &motor_tcb, 
                  (CPU_CHAR      *) "MotorMove", 
@@ -113,11 +118,10 @@ static  void  AppTaskStart (void *p_arg)
                  (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE/10, //stk_limit
                  (CPU_STK_SIZE   ) MOTOR_TASK_STK_SIZE, 
                  (OS_MSG_QTY     ) 0, 
-                 (OS_TICK        ) 0, 
+                 (OS_TICK        ) 5, 
                  (void          *) 0, 
                  (OS_OPT         )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR), 
                  (OS_ERR        *) &err
     );        
-    
     return; 
 }

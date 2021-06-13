@@ -42,7 +42,7 @@ void motorTask(void* parg){
     initMotor();
     OS_ERR err; 
     while(1){
-      printf("state is %d, direction is %d\n",gCarState,gCarDir);
+      //printf("state is %d, direction is %d\n",gCarState,gCarDir);
         if( gCarState == STOP){
             for(int i=0;i<2;i++){
                 //right : stop
@@ -54,7 +54,7 @@ void motorTask(void* parg){
                 GPIO_ResetBits(GPIOA,motorB[i].pinOne);
                 GPIO_ResetBits(GPIOA,motorB[i].pinTwo);
             }
-              printf("CAR STOPPED!\n");
+              //printf("CAR STOPPED!\n");
         }
         else if ( gCarState == GO){
             if(gCarDir == FORWARD){
@@ -68,7 +68,7 @@ void motorTask(void* parg){
                     GPIO_SetBits(GPIOA,motorA[i].pinOne);
                     GPIO_ResetBits(GPIOA,motorA[i].pinTwo);
                 }
-                printf("CAR GO FORWARD!\n");
+                //printf("CAR GO FORWARD!\n");
             }
             else if (gCarDir ==RIGHT){
                 for(int i=0;i<2;i++){
@@ -81,7 +81,7 @@ void motorTask(void* parg){
                     //GPIO_WriteBit(GPIOA,motorA[i].pinOne, i); //set
                     //GPIO_WriteBit(GPIOA,motorA[i].pinTwo, !i); //reset
                 }
-                printf("CAR GO LEFT!\n");
+                //printf("CAR GO LEFT!\n");
             }
             else if (gCarDir == LEFT){
                 for(int i=0;i<2;i++){
@@ -94,13 +94,13 @@ void motorTask(void* parg){
                     //GPIO_WriteBit(GPIOA,motorA[i].pinOne, !i); //reset
                     //GPIO_WriteBit(GPIOA,motorA[i].pinTwo, i); //set
                 }
-                printf("CAR GO RIGHT!\n");
+                //printf("CAR GO RIGHT!\n");
             }
-            else printf("WRONG gCarDir\n");
+            //else printf("WRONG gCarDir\n");
         }
-        else printf("WRONG gCarState\n");
+        //else printf("WRONG gCarState\n");
     //GPIO_SetBits(GPIOE,GPIO_Pin_2);
-        OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
+        //OSTimeDlyHMSM(0, 0, 0, 50, OS_OPT_TIME_HMSM_STRICT, &err);
 
     }
     

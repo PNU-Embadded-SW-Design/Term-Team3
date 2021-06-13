@@ -13,7 +13,7 @@ int CAR_STATE = 0;
 #define GO_RIGHT 3
 */ 
 
-#define _DEBUG
+//#define _DEBUG
 
 typedef enum {STOP, GO} CAR_STATE; 
 typedef enum {FORWARD, LEFT, RIGHT} CAR_DIR;  

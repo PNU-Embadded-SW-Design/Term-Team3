@@ -4,7 +4,7 @@
 #include "includes.h"
 
 #define LINE_TASK_STK_SIZE      1024
-#define LINE_TASK_PRIO          2
+#define LINE_TASK_PRIO          4
 #define LINE_PORT               GPIOB
 #define R_SENSE                 GPIO_IDR_IDR12
 #define L_SENSE                 GPIO_IDR_IDR13

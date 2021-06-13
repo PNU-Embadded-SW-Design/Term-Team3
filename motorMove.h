@@ -5,7 +5,7 @@
 #include "term.h"
 
 #define MOTOR_TASK_STK_SIZE 128
-#define MOTOR_TASK_PRIO 2
+#define MOTOR_TASK_PRIO 4
 
 static OS_TCB motor_tcb;
 static CPU_STK motor_stack[MOTOR_TASK_STK_SIZE];
