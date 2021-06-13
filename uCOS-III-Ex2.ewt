@@ -1823,6 +1823,12 @@
         </file>
     </group>
     <file>
+        <name>$PROJ_DIR$\deliver.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\deliver.h</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\distanceSensor.c</name>
     </file>
     <file>

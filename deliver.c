@@ -3,7 +3,8 @@
 #include "touch.h"
 #include "term.h"
 #include <stdio.h>
-
+int btn = 0;
+u16 cur_x,cur_y,pixel_x,pixel_y;
 void showNumberPad(void){
     LCD_DrawRectangle(LCD_REC_X, LCD_REC_Y, LCD_REC_X + LCD_REC_LEN, LCD_REC_Y + LCD_REC_LEN);//1
     LCD_ShowString(LCD_REC_X + 16, LCD_REC_Y + 11, "1", BLACK, WHITE);
@@ -27,7 +28,7 @@ void showNumberPad(void){
     LCD_ShowString(LCD_REC_X + 136, LCD_REC_Y + 131, "9", BLACK, WHITE);
 }
 
-int funcNumCheck(uint16_t pixel_x, uint16_t pixel_y){
+int funcNumCheck(u16 pixel_x,u16 pixel_y){
     int btn = 0;
     if(pixel_x > LCD_REC_X && pixel_x < (LCD_REC_X + LCD_REC_LEN)){ //1
         if(pixel_y > LCD_REC_Y && pixel_y < LCD_REC_Y+LCD_REC_LEN){
@@ -93,22 +94,23 @@ void initLCD(){
     LCD_Clear(WHITE);
     
 }
-void initDeliever(){
+void initDeliver(){
     initLCD();
     const int x=0,y=1;
     int str[2] = {80,70},change[2] = {30,240},exit[2]={140,240}, rec_len[2]={80,40};
     
-    LCD_ShowString(str[x], str[y], "NUMBER", BLACK, WHITE);
-    LCD_ShowNum(str[x]+70, str[y], num, 1, BLACK, WHITE);
-    LCD_DrawRectangle(change[x],change[y], change[x]+rec_len[x],change[y]+rec_len[y]);
-    LCD_DrawRectangle(exit[x],exit[y], exit[x]+rec_len[x],exit[y]+rec_len[y]);
-    LCD_ShowString(change[x]+5,change[y]+10, "PW CHANGE",BLACK,WHITE);
-    LCD_ShowString(exit[x]+25,exit[y]+10, "EXIT",BLACK,WHITE);
-
+    LCD_ShowString(str[x], str[y], "Which room?", BLACK, WHITE);
+    showNumberPad();
+    int num = 5;
+    Touch_GetXY(&cur_x, &cur_y, 1);
+    Convert_Pos(cur_x, cur_y, &pixel_x, &pixel_y);
+    funcNumCheck(pixel_x,pixel_y);
+    LCD_Clear(WHITE);
+    LCD_ShowNum(str[x],str[y],num,1,BLACK,WHITE);
 }
 void deliverTask(void* parg){
     initDeliver();
-    while(1){
+    /*while(1){
         if(DELIVER_STATE == DELIVERABLE){      
             //print lcd
             while(1){
@@ -138,5 +140,5 @@ void deliverTask(void* parg){
         else{
             printf("hello,there\n");
         }
-    }
+    }*/
 }
